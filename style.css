@@ -44,3 +44,15 @@
      background-color: royalblue;
    }
    
+
+   /*
+   ejemplo grid responsive
+   
+   {
+display: grid;
+gap: 1rem;
+grid-auto-rows: 22rem;       auto-fit= ocupa todo el espacio
+grid-template-columns: repeat(auto-fill, minmanx(15rem, 1fr))
+
+
+   } */
