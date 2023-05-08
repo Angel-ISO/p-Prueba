@@ -49,8 +49,8 @@ export class CustomerLista extends HTMLElement{
                                                 <form id = "frmData">
                                                     <div class="row g-3">
                                                         <div class="col-3">
-                                                            <label for="createdAt" class="form-label">Fecha registro</label>
-                                                            <input type="date" class="form-control" id="createdAt" name="createdAt">                  
+                                                            <label for="Country" class="form-label">Fecha registro</label>
+                                                            <input type="date" class="form-control" id="Country" name="createdAt">                  
                                                         </div>
                                                         <div class="col-3">
                                                             <label for="cc" class="form-label">Documento del Cliente</label>
