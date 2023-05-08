@@ -4,8 +4,7 @@ export class CustomerForm extends HTMLElement{
         super();
         this.render();
         this.saveData();
-        this.viewDataHtml();
-    }
+        }
     render(){
         this.innerHTML = /* html */ `
         <div class="card">
@@ -17,11 +16,11 @@ export class CustomerForm extends HTMLElement{
                             <form id = "frmData">
                                 <div class="row g-3">
                                     <div class="col-3">
-                                        <label for="createdAt" class="form-label">Pais Origen</label>
+                                        <label for="Country" class="form-label">Pais Origen</label>
                                         <input type="text" class="form-control" id="Country" name="createdAt">                  
                                     </div>
                                     <div class="col-3">
-                                    <label for="createdAt" class="form-label">Ciudad Origen</label>
+                                    <label for="City" class="form-label">Ciudad Origen</label>
                                     <input type="text" class="form-control" id="City" name="createdAt">                  
                                 </div>
                                     <div class="col-3">
@@ -70,24 +69,9 @@ export class CustomerForm extends HTMLElement{
             opc[e.submitter.dataset.accion](data)    
         })
     }
-viewDataHtml (customer){
-        const tablaClientes = document.querySelector('#rgsClientes')    
-        tablaClientes.innerHTML = "";
-        console.log(customer)
-        datos.map((item)=>{    
-            const customerInfo = document.createElement('td');
-            customerInfo.innerHTML =/*html*/ `
-                <td>${item.Country}</td>
-                <td>${item.city}
-            `;
     
-        tablaClientes.appendChild(customerInfo);
-    })
-    
-}
-  
 
-
+     
 
 }
 customElements.define("customer-form",CustomerForm);

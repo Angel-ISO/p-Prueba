@@ -17,10 +17,9 @@ const getDataAll = async()=>{
     console.log(res);
 }
 const postData = async(data)=>{
-    console.log('ddddd');
     config.method = "POST";
     config.body = JSON.stringify(data);
-    let res = await ( await fetch("http://localhost:3000/customer/",config)).json();
+    let res = await (await fetch ("http://localhost:3000/customer",config)).json();
     console.log(res);
 }
 const putData = async(data)=>{
@@ -39,6 +38,13 @@ const searchData = async(data)=>{
     let res = await ( await fetch(`http://localhost:3000/customer?q=${Object.values(data).join("")}`,config)).json();
     console.log(res);
 }
+const searchDataById = async(id)=>{
+    config.method = "GET";
+    let res = await ( await fetch(`http://localhost:3000/customer/${id}`,config)).json();
+    console.log(id);
+    return res;
+}
+
 
 export{
     getDataAll,
@@ -46,5 +52,6 @@ export{
     putData,
     deleteData,
     searchData,
+    searchDataById,
     opc 
 }

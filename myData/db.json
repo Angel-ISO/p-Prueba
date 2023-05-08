@@ -1,14 +1,19 @@
 {
-  "city": [],
+
+
+
+  "rutas":[],
+  "flotas":[],
+  "ticketes":[],
   "customer": [
     {
       "Country": "colombia",
-      "city":"giron",
+      "City": "giron",
       "cc": "6666",
       "nombres": "angel",
       "apellidos": "ortega",
       "email": "angelgabrielorteg@gmail.com",
-      "telefono": "6666",
+      "telefono": "3123943",
       "fechanac": "2023-05-05",
       "id": 1
     }
