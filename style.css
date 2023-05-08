@@ -45,6 +45,55 @@
    }
    
 
+   header{
+    position: absolute;
+    bottom: 30%;
+    padding: 0 50px;
+   }
+   header h1{
+     font-size: 7rem;
+   }
+   header h2{
+     font-size: 4rem;
+   }
+   header p{
+     font-size: 1.5rem;
+     margin-top: 20px;
+     margin-bottom: 20px;
+   }
+  
+  
+ 
+
+   .container .emp{
+    padding: 5%;
+     position: absolute;
+     height:60%;
+     width: 30%;
+     right: 7%;
+     bottom: 0;
+     z-index: 999;
+   }
+   .container .fondo-emp{
+    padding: 5%;
+     position: absolute;
+     height: 90%;
+     width: 40%;
+     right: 4%;
+     bottom: 0;
+   }
+
+  
+
+
+
+
+
+
+
+
+
+
    /*
    ejemplo grid responsive
    

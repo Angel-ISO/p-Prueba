@@ -4,6 +4,7 @@ export class CustomerForm extends HTMLElement{
         super();
         this.render();
         this.saveData();
+        this.viewDataHtml();
     }
     render(){
         this.innerHTML = /* html */ `
@@ -16,11 +17,15 @@ export class CustomerForm extends HTMLElement{
                             <form id = "frmData">
                                 <div class="row g-3">
                                     <div class="col-3">
-                                        <label for="createdAt" class="form-label">Fecha registro</label>
-                                        <input type="date" class="form-control" id="createdAt" name="createdAt">                  
+                                        <label for="createdAt" class="form-label">Pais Origen</label>
+                                        <input type="text" class="form-control" id="Country" name="createdAt">                  
                                     </div>
                                     <div class="col-3">
-                                        <label for="cc" class="form-label">Documento del Cliente</label>
+                                    <label for="createdAt" class="form-label">Ciudad Origen</label>
+                                    <input type="text" class="form-control" id="City" name="createdAt">                  
+                                </div>
+                                    <div class="col-3">
+                                        <label for="cc" class="form-label">C.C /  T.I</label>
                                         <input type="text" class="form-control" id="cc" name="cc">
                                     </div>
                                     <div class="col-3">
@@ -34,15 +39,15 @@ export class CustomerForm extends HTMLElement{
                                 </div>
                                 <div class="row g-3">
                                     <div class="col-4">
-                                        <label for="email" class="form-label">Email cliente</label>
+                                        <label for="email" class="form-label">Correo electronico</label>
                                         <input type="email" class="form-control" id="email" name="email">
                                     </div>
                                     <div class="col-4">
-                                        <label for="telefono" class="form-label">Nro Movil</label>
+                                        <label for="telefono" class="form-label">Telefono</label>
                                         <input type="text" class="form-control" id="telefono" name="telefono">                  
                                     </div>
                                     <div class="col-4">
-                                        <label for="fechanac" class="form-label">Fecha Nacimiento</label>
+                                        <label for="fechanac" class="form-label">Fecha de nacimiento</label>
                                         <input type="date" class="form-control" id="fechanac" name="fechanac">                  
                                     </div>
                                 </div>
@@ -65,5 +70,24 @@ export class CustomerForm extends HTMLElement{
             opc[e.submitter.dataset.accion](data)    
         })
     }
+viewDataHtml (customer){
+        const tablaClientes = document.querySelector('#rgsClientes')    
+        tablaClientes.innerHTML = "";
+        console.log(customer)
+        datos.map((item)=>{    
+            const customerInfo = document.createElement('td');
+            customerInfo.innerHTML =/*html*/ `
+                <td>${item.Country}</td>
+                <td>${item.city}
+            `;
+    
+        tablaClientes.appendChild(customerInfo);
+    })
+    
+}
+  
+
+
+
 }
 customElements.define("customer-form",CustomerForm);

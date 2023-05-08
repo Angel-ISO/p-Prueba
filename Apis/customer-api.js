@@ -20,7 +20,7 @@ const postData = async(data)=>{
     console.log('ddddd');
     config.method = "POST";
     config.body = JSON.stringify(data);
-    let res = await ( await fetch("http://localhost:3000/customer",config)).json();
+    let res = await ( await fetch("http://localhost:3000/customer/",config)).json();
     console.log(res);
 }
 const putData = async(data)=>{
