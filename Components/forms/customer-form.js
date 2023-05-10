@@ -17,11 +17,11 @@ export class CustomerForm extends HTMLElement{
                                 <div class="row g-3">
                                     <div class="col-3">
                                         <label for="Country" class="form-label">Pais Origen</label>
-                                        <input type="text" class="form-control" id="Country" name="createdAt">                  
+                                        <input type="text" class="form-control" id="Country" name="Country">                  
                                     </div>
                                     <div class="col-3">
                                     <label for="City" class="form-label">Ciudad Origen</label>
-                                    <input type="text" class="form-control" id="City" name="createdAt">                  
+                                    <input type="text" class="form-control" id="City" name="City">                  
                                 </div>
                                     <div class="col-3">
                                         <label for="cc" class="form-label">C.C /  T.I</label>

@@ -21,10 +21,9 @@ export class CustomerLista extends HTMLElement{
             <th>C.C</th>
             <th>nombres</th>
             <th>apellidos</th>
-            <th>email</th>
             <th>telefono</th>
+            <th>fecha de nacimiento</th>
             <th>email</th>
-            <th>fecha nacimiento</th>
             <th>Id registro</th>
             </tr>
         </thead>
@@ -48,11 +47,16 @@ export class CustomerLista extends HTMLElement{
                                             <div class="col-12">
                                                 <form id = "frmData">
                                                     <div class="row g-3">
-                                                        <div class="col-3">
-                                                            <label for="Country" class="form-label">Fecha registro</label>
-                                                            <input type="date" class="form-control" id="Country" name="createdAt">                  
-                                                        </div>
-                                                        <div class="col-3">
+                                                    <div class="col-3">
+                                                        <label for="Country" class="form-label">pais</label>
+                                                        <input type="text" class="form-control" id="Country" name="Country">                  
+                                                    </div>
+                                                    
+                                                    <div class="col-3">
+                                                        <label for="City" class="form-label">ciudad</label>
+                                                        <input type="text" class="form-control" id="Country" name="City">                  
+                                                    </div>
+                                                    <div class="col-3">
                                                             <label for="cc" class="form-label">Documento del Cliente</label>
                                                             <input type="text" class="form-control" id="cc" name="cc">
                                                         </div>
@@ -123,15 +127,16 @@ export class CustomerLista extends HTMLElement{
     crearListaClientesHTML = (clientes)=>{
         let listaHTML = /* html */ `
         <tr>
-            <td>${clientes.id}</td>
-            <td>${clientes.Country}</td>
-            <td>${clientes.city}</td>
-            <td>${clientes.cc}</td>
-            <td>${clientes.nombres}</td>
-            <td>${clientes.apellidos}</td>
-            <td>${clientes.telefono}</td>
-            <td>${clientes.fechanac}</td>
-            <td>${clientes.email}</td>
+        <td>${clientes.Country}</td>
+        <td>${clientes.City}</td>
+        <td>${clientes.cc}</td>
+        <td>${clientes.nombres}</td>
+        <td>${clientes.apellidos}</td>
+        <td>${clientes.telefono}</td>
+        <td>${clientes.fechanac}</td>
+        <td>${clientes.email}</td>
+        <td>${clientes.id}</td>
+        <td></td>
             <td>
                     <a class="btn btn-success " data-bs-toggle="modal" data-bs-target="#putCliente" id="putData" data-idcli='${clientes.id}'><i class='bx bx-edit-alt icono' data-idcli='${clientes.id}'></i></a>
                     <a class="btn btn-danger" data-idclidel='${clientes.id}'><i class='bx bx-message-alt-x icono'></i></a>
@@ -171,9 +176,8 @@ export class CustomerLista extends HTMLElement{
         frm.set("ciudad", City);
         frm.set("telefono",telefono);
         frm.set("fechanac",fechanac);
-        // Itera a través de los pares clave-valor de los datos
+
         for (var pair of frm.entries()) {
-            // Establece los valores correspondientes en el formulario
             myForm.elements[pair[0]].value = pair[1];
         }
 

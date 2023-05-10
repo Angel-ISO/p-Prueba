@@ -14,13 +14,13 @@ let config = {
 const getDataAll = async()=>{
     config.method = "GET";
     let res = await ( await fetch("http://localhost:3000/customer",config)).json();
-    console.log(res);
+    return res;
 }
 const postData = async(data)=>{
     config.method = "POST";
     config.body = JSON.stringify(data);
     let res = await (await fetch ("http://localhost:3000/customer",config)).json();
-    console.log(res);
+    return res
 }
 const putData = async(data)=>{
     config.method = "PUT";

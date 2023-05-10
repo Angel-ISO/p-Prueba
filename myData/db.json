@@ -1,10 +1,7 @@
 {
-
-
-
-  "rutas":[],
-  "flotas":[],
-  "ticketes":[],
+  "rutas": [],
+  "flotas": [],
+  "ticketes": [],
   "customer": [
     {
       "Country": "colombia",
@@ -16,6 +13,17 @@
       "telefono": "3123943",
       "fechanac": "2023-05-05",
       "id": 1
+    },
+    {
+      "Country": "brazil",
+      "City": "rio",
+      "cc": "23456780",
+      "nombres": "milito",
+      "apellidos": "regino",
+      "email": "regino@gmail.com",
+      "telefono": "32456890",
+      "fechanac": "2000-03-16",
+      "id": 2
     }
   ]
 }
